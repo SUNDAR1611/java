@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 0 10px #ccc;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌍 List of Countries</h1>
+    <table>
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Capital </th>
+            <th> Population </th>
+            <th> Area (km²) </th>
+        </tr>
+        {% for value in val %}
+        <tr>
+            <td>{{ value.id}}</td>
+            <td>{{ value.name }}</td>
+            <td>{{ value.capital }}</td>
+            <td>{{ value.population}}</td>
+            <td>{{value.area}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
